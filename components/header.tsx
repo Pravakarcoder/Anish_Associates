@@ -9,13 +9,13 @@ import { cn } from '@/lib/utils';
 import Logo from '@/components/logo';
 
 const routes = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About Us' },
-  { href: '/services', label: 'Services' },
-  { href: '/industries', label: 'Industries' },
-  { href: '/team', label: 'Our Team' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/contact', label: 'Contact' },
+  { href: '#', label: 'Home' },
+  { href: '#about-us', label: 'About Us' },
+  { href: '#services', label: 'Services' },
+  { href: '#industries', label: 'Industries' },
+   
+  { href: '#blog', label: 'Blog' },
+  { href: '#contact', label: 'Contact' },
 ];
 
 export default function Header() {
@@ -42,7 +42,7 @@ export default function Header() {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <Logo className={cn(
-            "h-10 w-auto transition-all duration-300",
+            "h-14 w-auto transition-all duration-300",
             isScrolled ? "text-primary" : "text-white"
           )} />
         </Link>
@@ -66,9 +66,11 @@ export default function Header() {
         </nav>
         
         <div className="hidden md:block">
+         <Link href="https://cal.com/raushn-pandit-pii-global">
           <Button variant="default" className="bg-[#D4AF37] hover:bg-[#B8971F] text-white">
             Book Consultation
           </Button>
+          </Link>
         </div>
 
         {/* Mobile Navigation */}
@@ -77,7 +79,7 @@ export default function Header() {
             <Button variant="ghost" size="icon" className="md:hidden">
               <Menu className={cn(
                 "h-6 w-6",
-                isScrolled ? "text-gray-900 dark:text-gray-100" : "text-white"
+                isScrolled ? "text-gray-900 dark:text-gray-100" : "text-white hover:text-black"
               )} />
               <span className="sr-only">Toggle menu</span>
             </Button>
@@ -93,9 +95,11 @@ export default function Header() {
                   {route.label}
                 </Link>
               ))}
+              
               <Button className="mt-4 bg-[#D4AF37] hover:bg-[#B8971F] text-white">
                 Book Consultation
               </Button>
+             
             </div>
           </SheetContent>
         </Sheet>

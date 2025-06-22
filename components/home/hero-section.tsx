@@ -60,7 +60,7 @@ export default function HeroSection() {
               size="lg"
               className="bg-[#D4AF37] hover:bg-[#B8971F] text-white"
             >
-              <Link href="/contact">Book Consultation</Link>
+              <Link href="https://cal.com/raushn-pandit-pii-global">Book Consultation</Link>
             </Button>
             <Button
               asChild
@@ -68,7 +68,7 @@ export default function HeroSection() {
               size="lg"
               className="border-white text-white bg-white/10"
             >
-              <Link href="/services">Explore Services</Link>
+              <Link href="#services">Explore Services</Link>
             </Button>
           </motion.div>
         </div>
@@ -81,7 +81,7 @@ export default function HeroSection() {
           className="w-6 h-10 border-2 border-white rounded-full flex justify-center p-1"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.8 }}
+          transition={{ delay: 20, duration: 0.8 }}
         >
           <motion.div
             className="w-1.5 h-1.5 bg-white rounded-full"

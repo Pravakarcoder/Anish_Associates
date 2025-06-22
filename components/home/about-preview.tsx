@@ -17,7 +17,7 @@ export default function AboutPreview() {
   if (!mounted) return null;
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white" id="about-us">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -32,10 +32,8 @@ export default function AboutPreview() {
               </h2>
               <p className="text-gray-600 mb-6">
                 {` Founded with a vision to elevate financial standards in Nepal,
-                NFA Partners has grown to become one of the country's most
-                respected audit and accounting firms. Our team of certified
-                professionals combines international best practices with deep
-                local expertise.`}
+                Anish & Associates has grown to become one of the country's most
+                respected audit and accounting firms.`}
               </p>
               <p className="text-gray-600 mb-8">
                 {`                We're proud to hold all regulatory licenses from the Institute of Chartered Accountants of Nepal (ICAN) and maintain rigorous professional standards across all our services.
@@ -86,13 +84,7 @@ export default function AboutPreview() {
                 </div>
               </div>
 
-              <Button
-                asChild
-                variant="outline"
-                className="border-[#1A365D] text-[#1A365D] hover:bg-[#1A365D] hover:text-white"
-              >
-                <Link href="/about">Learn More About Us</Link>
-              </Button>
+               
             </motion.div>
           </div>
 
@@ -116,13 +108,13 @@ export default function AboutPreview() {
 
             {/* Stats card */}
             <div className="absolute -bottom-10 -left-10 bg-white p-6 rounded-lg shadow-lg w-48 hidden md:block">
-              <p className="text-[#D4AF37] text-5xl font-bold">18+</p>
+              <p className="text-[#D4AF37] text-5xl font-bold">3+</p>
               <p className="text-gray-700 mt-2">Years of Excellence</p>
             </div>
 
             {/* Client card */}
             <div className="absolute -top-10 -right-10 bg-[#1A365D] p-6 rounded-lg shadow-lg w-60 hidden md:block">
-              <p className="text-white text-5xl font-bold">500+</p>
+              <p className="text-white text-5xl font-bold">150+</p>
               <p className="text-gray-300 mt-2">Satisfied Clients</p>
             </div>
           </motion.div>

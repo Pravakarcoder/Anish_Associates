@@ -19,49 +19,49 @@ const industries = [
     icon: <Building2 className="h-8 w-8" />,
     name: "Construction",
     description: "Specialized accounting for construction projects and contractors",
-    link: "/industries#construction"
+  
   },
   {
     icon: <Heart className="h-8 w-8" />,
     name: "NGOs",
     description: "Transparent financial management for non-profit organizations",
-    link: "/industries#ngos"
+    
   },
   {
     icon: <GraduationCap className="h-8 w-8" />,
     name: "Education",
     description: "Financial services for schools, colleges and training institutes",
-    link: "/industries#education"
+   
   },
   {
     icon: <ShoppingBag className="h-8 w-8" />,
     name: "Retail",
     description: "Accounting solutions for retail businesses and franchises",
-    link: "/industries#retail"
+    
   },
   {
     icon: <Landmark className="h-8 w-8" />,
     name: "Banking",
     description: "Specialized auditing for financial institutions",
-    link: "/industries#banking"
+     
   },
   {
     icon: <Factory className="h-8 w-8" />,
     name: "Manufacturing",
     description: "Cost accounting and financial management for manufacturers",
-    link: "/industries#manufacturing"
+    
   },
   {
     icon: <Home className="h-8 w-8" />,
     name: "Real Estate",
     description: "Financial services for property development and management",
-    link: "/industries#real-estate"
+     
   },
   {
     icon: <Building className="h-8 w-8" />,
     name: "Hospitality",
     description: "Accounting solutions for hotels, restaurants and tourism",
-    link: "/industries#hospitality"
+     
   }
 ];
 
@@ -75,7 +75,7 @@ export default function IndustriesSection() {
   if (!mounted) return null;
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white" id='industries'>
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center max-w-3xl mx-auto mb-16"
@@ -101,8 +101,8 @@ export default function IndustriesSection() {
               transition={{ duration: 0.5, delay: index * 0.05 }}
               viewport={{ once: true }}
             >
-              <Link 
-                href={industry.link}
+              <div
+                 
                 className="block p-6 bg-gray-50 rounded-lg transition-all duration-300 hover:shadow-md hover:bg-[#1A365D]/5 text-center h-full"
               >
                 <div className="flex justify-center mb-4 text-[#D4AF37]">
@@ -114,7 +114,7 @@ export default function IndustriesSection() {
                 <p className="text-gray-600 text-sm">
                   {industry.description}
                 </p>
-              </Link>
+              </div>
             </motion.div>
           ))}
         </div>
