@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <Logo className="text-white mb-4" />
             <p className="text-gray-300 mt-4 mb-6">
-              Empowering Nepal's businesses with trusted financial expertise since 2005.
+            {`  Empowering Nepal's businesses with trusted financial expertise since 2023.`}
             </p>
             <div className="flex space-x-4">
               <Link href="#" className="text-gray-300 hover:text-white transition-colors">
@@ -37,10 +37,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {['Home', 'About Us', 'Services', 'Industries', 'Team', 'Blog', 'Contact'].map((item) => (
+              {['Home', 'About Us', 'Services', 'Industries', 'Blog', 'Contact'].map((item) => (
                 <li key={item}>
                   <Link 
-                    href={`/${item === 'Home' ? '' : item.toLowerCase().replace(' ', '-')}`} 
+                    href={`#${item === 'Home' ? '' : item.toLowerCase().replace(' ', '-')}`} 
                     className="text-gray-300 hover:text-white transition-colors"
                   >
                     {item}
@@ -63,12 +63,12 @@ export default function Footer() {
                 'Internal Control Systems'
               ].map((service) => (
                 <li key={service}>
-                  <Link 
-                    href="/services" 
+                  <div 
+                     
                     className="text-gray-300 hover:text-white transition-colors"
                   >
                     {service}
-                  </Link>
+                  </div>
                 </li>
               ))}
             </ul>
@@ -81,16 +81,16 @@ export default function Footer() {
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-3 text-[#D4AF37]" />
                 <span className="text-gray-300">
-                  Kamaladi, Kathmandu 44600, Nepal
+                  New Baneshwor, Kathmandu 44600, Nepal
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-3 text-[#D4AF37]" />
-                <span className="text-gray-300">+977 1 4444555</span>
+                <Link  href="tel:9851213979" className="text-gray-300">+977 9851213979</Link>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-3 text-[#D4AF37]" />
-                <span className="text-gray-300">info@nfapartners.com</span>
+             <Link  href="mailto:anishassociates.offical@gmail.com" >   <span className="text-gray-300">anishassociates.offical@gmail.com</span></Link>
               </li>
             </ul>
           </div>
@@ -98,13 +98,12 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} NFA Partners. All rights reserved.
+            © {new Date().getFullYear()} Anish & Associates. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0">
             <ul className="flex space-x-6 text-sm text-gray-400">
-              <li><Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-              <li><Link href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link></li>
-              <li><Link href="/sitemap" className="hover:text-white transition-colors">Sitemap</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
         </div>

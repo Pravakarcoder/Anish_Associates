@@ -1,4 +1,6 @@
-import { BarChart4 } from 'lucide-react';
+
+import Image from 'next/image';
+import logo from '@/public/Logo.png';
 
 interface LogoProps {
   className?: string;
@@ -7,8 +9,8 @@ interface LogoProps {
 export default function Logo({ className }: LogoProps) {
   return (
     <div className={`flex items-center ${className}`}>
-      <BarChart4 className="h-8 w-8 mr-2" />
-      <span className="font-bold text-lg">NFA Partners</span>
+      
+      <Image src={logo} alt="Logo" className="h-14 w-auto" />
     </div>
   );
 }

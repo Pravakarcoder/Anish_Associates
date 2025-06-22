@@ -16,7 +16,7 @@ export default function CtaSection() {
   if (!mounted) return null;
 
   return (
-    <section className="py-20 bg-gradient-to-r from-[#1A365D] to-[#2A4A7F]">
+    <section className="py-20 bg-gradient-to-r from-[#1A365D] to-[#2A4A7F]" id="contact">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -40,7 +40,7 @@ export default function CtaSection() {
                 size="lg"
                 className="bg-[#D4AF37] hover:bg-[#B8971F] text-white"
               >
-                <Link href="/contact" className="flex items-center">
+                <Link href="https://cal.com/raushn-pandit-pii-global" className="flex items-center">
                   <Calendar className="mr-2 h-5 w-5" />
                   Book a Consultation
                 </Link>
@@ -51,7 +51,7 @@ export default function CtaSection() {
                 size="lg"
                 className="border-white text-white  bg-white/10"
               >
-                <Link href="tel:+9771444555" className="flex items-center">
+                <Link href="tel:9851213979" className="flex items-center">
                   <PhoneCall className="mr-2 h-5 w-5" />
                   Call Us Now
                 </Link>

@@ -9,34 +9,35 @@ import {
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { motion } from '@/lib/motion';
+import Image from 'next/image';
 
 const testimonials = [
   {
-    quote: "NFA Partners has been instrumental in streamlining our financial processes. Their expertise in Nepalese tax regulations saved us from costly compliance issues.",
-    name: "Aarav Sharma",
-    position: "CEO, Kathmandu Construction Ltd.",
-    company: "Kathmandu Construction Ltd.",
+    quote: "Working with Anish & Associates was a game-changer. They are professional, prompt, and always one step ahead in delivering results. Highly recommended!",
+    name: "Anish Sharma",
+    position: "CEO",
+    company: "ABC Construction Ltd.",
     image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   },
   {
-    quote: "As an NGO operating in Nepal, we needed accountants who understand both international and local requirements. The team at NFA Partners has exceeded our expectations.",
-    name: "Sita Thapa",
+    quote: "Working with Anish & Associates was a game-changer. They are professional, prompt, and always one step ahead in delivering results. Highly recommended!",
+    name: "Willam Wins",
     position: "Finance Director",
-    company: "Nepal Education Initiative",
+    company: "We Initiative",
     image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   },
   {
-    quote: "Their audit services are thorough and professional. We appreciate their attention to detail and commitment to maintaining the highest standards of financial reporting.",
-    name: "Rajesh Gurung",
-    position: "CFO",
-    company: "Himalayan Bank Ltd.",
+    quote: "Working with Anish & Associates was a game-changer. They are professional, prompt, and always one step ahead in delivering results. Highly recommended!",
+    name: "Hmani Gurung",
+    position: "GM",
+    company: "Upright accounting Ltd.",
     image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   },
   {
-    quote: "NFA Partners helped us navigate the complex tax landscape when expanding our retail chain across Nepal. Their strategic advice has been invaluable to our growth.",
+    quote: "Working with Anish & Associates was a game-changer. They are professional, prompt, and always one step ahead in delivering results. Highly recommended!",
     name: "Anisha Shrestha",
     position: "Owner",
-    company: "Kathmandu Fashion Retail",
+    company: "We meet fasion",
     image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   }
 ];
@@ -90,7 +91,7 @@ export default function TestimonialsSection() {
             What Our Clients Say
           </h2>
           <p className="text-gray-300">
-            We've helped hundreds of businesses across Nepal achieve financial clarity and compliance.
+          {`  We've helped hundreds of businesses across Nepal achieve financial clarity and compliance.`}
           </p>
         </motion.div>
 
@@ -109,14 +110,16 @@ export default function TestimonialsSection() {
                     <div className="text-[#D4AF37] mb-4">
                       <Quote className="h-10 w-10" />
                     </div>
-                    <p className="text-gray-700 text-lg italic">"{testimonial.quote}"</p>
+                    <p className="text-gray-700 text-lg italic">{`"{testimonial.quote}"`}</p>
                   </CardContent>
                   <CardFooter className="border-t pt-4">
                     <div className="flex items-center">
                       <div className="h-12 w-12 rounded-full overflow-hidden mr-4">
-                        <img 
+                        <Image
                           src={testimonial.image} 
                           alt={testimonial.name} 
+                          width={1000}
+                          height={1000}
                           className="h-full w-full object-cover"
                         />
                       </div>

@@ -27,37 +27,37 @@ const services = [
     icon: <ClipboardCheck className="h-10 w-10" />,
     title: "Auditing Services",
     description: "Comprehensive financial audits that ensure accuracy, compliance, and transparency in your financial reporting.",
-    link: "/services#auditing"
+    link: "#"
   },
   {
     icon: <ScrollText className="h-10 w-10" />,
     title: "Tax Advisory",
     description: "Strategic tax planning and compliance services tailored to Nepal's tax regulations and your business needs.",
-    link: "/services#tax"
+    link: "#"
   },
   {
     icon: <BarChart className="h-10 w-10" />,
     title: "Financial Reporting",
     description: "Clear, accurate financial statements and reports that meet local and international standards.",
-    link: "/services#reporting"
+    link: "#"
   },
   {
     icon: <BookOpen className="h-10 w-10" />,
     title: "Bookkeeping",
     description: "Meticulous recording of financial transactions ensuring your books are always accurate and up-to-date.",
-    link: "/services#bookkeeping"
+    link: "#"
   },
   {
     icon: <FileCheck className="h-10 w-10" />,
     title: "Compliance Services",
     description: "Navigate complex regulatory requirements with our specialized compliance consulting and implementation.",
-    link: "/services#compliance"
+    link: "#"
   },
   {
     icon: <ShieldCheck className="h-10 w-10" />,
     title: "Internal Control Systems",
     description: "Robust internal control frameworks to safeguard assets and enhance operational efficiency.",
-    link: "/services#internal-control"
+    link: "#"
   }
 ];
 
@@ -71,7 +71,7 @@ export default function ServicesSection() {
   if (!mounted) return null;
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50" id='services'>
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center max-w-3xl mx-auto mb-16"
@@ -84,8 +84,8 @@ export default function ServicesSection() {
             Our Core Services
           </h2>
           <p className="text-gray-600">
-            We provide a comprehensive suite of financial services designed to help Nepalese businesses thrive in today's complex economic landscape.
-          </p>
+{`            We provide a comprehensive suite of financial services designed to help Nepalese businesses thrive in today's complex economic landscape.
+`}          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -110,20 +110,14 @@ export default function ServicesSection() {
                   </CardDescription>
                 </CardContent>
                 <CardFooter>
-                  <Link href={service.link} className="text-[#1A365D] font-medium flex items-center group-hover:text-[#D4AF37]">
-                    Learn More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </Link>
+                 
                 </CardFooter>
               </Card>
             </motion.div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Button asChild className="bg-[#1A365D] hover:bg-[#142b4c] text-white">
-            <Link href="/services">View All Services</Link>
-          </Button>
-        </div>
+         
       </div>
     </section>
   );

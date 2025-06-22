@@ -13,6 +13,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { motion } from '@/lib/motion';
+import Image from 'next/image';
 
 const blogPosts = [
   {
@@ -54,7 +55,7 @@ export default function BlogPreview() {
   if (!mounted) return null;
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50" id='blog'>
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center max-w-3xl mx-auto mb-16"
@@ -82,8 +83,10 @@ export default function BlogPreview() {
             >
               <Card className="h-full flex flex-col overflow-hidden hover:shadow-lg transition-shadow duration-300">
                 <div className="h-48 overflow-hidden">
-                  <img 
+                  <Image 
                     src={post.image} 
+                    width={100}
+                    height={100}
                     alt={post.title} 
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
@@ -112,23 +115,14 @@ export default function BlogPreview() {
                       {post.readTime}
                     </span>
                   </div>
-                  <Link 
-                    href={`/blog/${post.slug}`} 
-                    className="text-[#1A365D] font-medium flex items-center hover:text-[#D4AF37] transition-colors"
-                  >
-                    Read More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </Link>
+                   
                 </CardFooter>
               </Card>
             </motion.div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Button asChild className="bg-[#1A365D] hover:bg-[#142b4c] text-white">
-            <Link href="/blog">View All Articles</Link>
-          </Button>
-        </div>
+        
       </div>
     </section>
   );
