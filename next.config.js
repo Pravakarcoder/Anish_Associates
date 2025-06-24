@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  trailingSlash: true, // Important for GitHub Pages routing
+  images: {
+    unoptimized: true,
+  },
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;
