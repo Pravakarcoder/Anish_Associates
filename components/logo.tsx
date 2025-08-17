@@ -1,6 +1,5 @@
-
-import Image from 'next/image';
-import logo from '@/public/Logo.png';
+import Image from "next/image";
+import logo from "@/public/Logo.png";
 
 interface LogoProps {
   className?: string;
@@ -9,8 +8,7 @@ interface LogoProps {
 export default function Logo({ className }: LogoProps) {
   return (
     <div className={`flex items-center ${className}`}>
-      
-      <Image src={logo} alt="Logo" className="h-14 w-auto" />
+      <Image src={logo} alt="Logo" className="h-28 lg:h-32 xl:h-36 w-auto" />
     </div>
   );
 }

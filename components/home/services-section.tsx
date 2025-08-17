@@ -1,64 +1,70 @@
 "use client";
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { 
-  ClipboardCheck, 
-  ScrollText, 
-  BarChart, 
-  BookOpen, 
-  FileCheck, 
-  ShieldCheck, 
-  ArrowRight 
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { 
-  Card, 
-  CardContent, 
-  CardDescription, 
-  CardFooter, 
-  CardHeader, 
-  CardTitle 
-} from '@/components/ui/card';
-import { motion } from '@/lib/motion';
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import {
+  ClipboardCheck,
+  ScrollText,
+  BarChart,
+  BookOpen,
+  FileCheck,
+  ShieldCheck,
+  ArrowRight,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { motion } from "@/lib/motion";
 
 const services = [
   {
     icon: <ClipboardCheck className="h-10 w-10" />,
     title: "Auditing Services",
-    description: "Comprehensive financial audits that ensure accuracy, compliance, and transparency in your financial reporting.",
-    link: "#"
+    description:
+      "Comprehensive financial audits that ensure accuracy, compliance, and transparency in your financial reporting.",
+    link: "#",
   },
   {
     icon: <ScrollText className="h-10 w-10" />,
     title: "Tax Advisory",
-    description: "Strategic tax planning and compliance services tailored to Nepal's tax regulations and your business needs.",
-    link: "#"
+    description:
+      "Strategic tax planning and compliance services tailored to Nepal's tax regulations and your business needs.",
+    link: "#",
   },
   {
     icon: <BarChart className="h-10 w-10" />,
     title: "Financial Reporting",
-    description: "Clear, accurate financial statements and reports that meet local and international standards.",
-    link: "#"
+    description:
+      "Clear, accurate financial statements and reports that meet local and international standards.",
+    link: "#",
   },
   {
     icon: <BookOpen className="h-10 w-10" />,
     title: "Bookkeeping",
-    description: "Meticulous recording of financial transactions ensuring your books are always accurate and up-to-date.",
-    link: "#"
+    description:
+      "Meticulous recording of financial transactions ensuring your books are always accurate and up-to-date.",
+    link: "#",
   },
   {
     icon: <FileCheck className="h-10 w-10" />,
     title: "Compliance Services",
-    description: "Navigate complex regulatory requirements with our specialized compliance consulting and implementation.",
-    link: "#"
+    description:
+      "Navigate complex regulatory requirements with our specialized compliance consulting and implementation.",
+    link: "#",
   },
   {
     icon: <ShieldCheck className="h-10 w-10" />,
     title: "Internal Control Systems",
-    description: "Robust internal control frameworks to safeguard assets and enhance operational efficiency.",
-    link: "#"
-  }
+    description:
+      "Robust internal control frameworks to safeguard assets and enhance operational efficiency.",
+    link: "#",
+  },
 ];
 
 export default function ServicesSection() {
@@ -71,9 +77,9 @@ export default function ServicesSection() {
   if (!mounted) return null;
 
   return (
-    <section className="py-20 bg-gray-50" id='services'>
+    <section className="py-20 bg-gray-50" id="services">
       <div className="container mx-auto px-4">
-        <motion.div 
+        <motion.div
           className="text-center max-w-3xl mx-auto mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -84,8 +90,9 @@ export default function ServicesSection() {
             Our Core Services
           </h2>
           <p className="text-gray-600">
-{`            We provide a comprehensive suite of financial services designed to help Nepalese businesses thrive in today's complex economic landscape.
-`}          </p>
+            {`            We provide a comprehensive suite of financial services designed to help Nepalese businesses thrive in today's complex economic landscape.
+`}{" "}
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -102,22 +109,20 @@ export default function ServicesSection() {
                   <div className="text-[#D4AF37] mb-4 group-hover:text-[#1A365D] transition-colors duration-300">
                     {service.icon}
                   </div>
-                  <CardTitle className="text-[#1A365D] text-xl">{service.title}</CardTitle>
+                  <CardTitle className="text-[#1A365D] text-xl">
+                    {service.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-gray-600 text-base">
                     {service.description}
                   </CardDescription>
                 </CardContent>
-                <CardFooter>
-                 
-                </CardFooter>
+                <CardFooter></CardFooter>
               </Card>
             </motion.div>
           ))}
         </div>
-
-         
       </div>
     </section>
   );

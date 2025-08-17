@@ -60,7 +60,9 @@ export default function HeroSection() {
               size="lg"
               className="bg-[#D4AF37] hover:bg-[#B8971F] text-white"
             >
-              <Link href="https://cal.com/raushn-pandit-pii-global">Book Consultation</Link>
+              <Link href="https://cal.com/anishassociates/30min">
+                Book Consultation
+              </Link>
             </Button>
             <Button
               asChild

@@ -5,7 +5,7 @@ import IndustriesSection from "@/components/home/industries-section";
 import TestimonialsSection from "@/components/home/testimonials-section";
 import CtaSection from "@/components/home/cta-section";
 import BlogPreview from "@/components/home/blog-preview";
-// import SecuritySection from "@/components/home/security-section";
+import ContactForm from "@/components/home/ContactForm";
 
 export default function Home() {
   return (
@@ -14,10 +14,10 @@ export default function Home() {
       <AboutPreview />
       <ServicesSection />
       <IndustriesSection />
-      <TestimonialsSection />
-      <BlogPreview />
-      {/* <SecuritySection /> */}
+      {/* <TestimonialsSection /> */}
+      {/* <BlogPreview /> */}
       <CtaSection />
+      <ContactForm />
     </div>
   );
 }
